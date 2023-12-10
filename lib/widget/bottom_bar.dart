@@ -8,57 +8,56 @@ class Bottom extends StatelessWidget {
       color: Colors.white,
       child: Container(
         height: 60,
-        child: TabBar(
-          labelColor: Colors.black26,
-          unselectedLabelColor: Colors.white60,
-          indicatorColor: Colors.transparent,
-          tabs: <Widget>[
-            Tab(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            TextButton.icon(onPressed:(){},
               icon: Icon(
                 Icons.shopping_bag_outlined,
                 size: 18,
               ),
-              child: Text(
+              label: Text(
                 '전체계좌',
                 style: TextStyle(fontSize: 9),
               ),
             ),
-            Tab(
+            TextButton.icon(onPressed:(){},
               icon: Icon(
                 Icons.shopping_bag_outlined,
                 size: 18,
               ),
-              child: Text(
+              label: Text(
                 '금융상품',
                 style: TextStyle(fontSize: 9),
               ),
             ),
-            Tab(
+            TextButton.icon(onPressed:(){},
               icon: Icon(
                 Icons.pie_chart,
                 size: 18,
               ),
-              child: Text(
+              label: Text(
                 '자산관리',
                 style: TextStyle(fontSize: 9),
               ),
             ),
-            Tab(
+            TextButton.icon(onPressed:(){},
               icon: Icon(
                 Icons.wallet_giftcard,
                 size: 18,
               ),
-              child: Text(
+              label: Text(
                 '혜택',
                 style: TextStyle(fontSize: 9),
               ),
             ),
-            Tab(
+            TextButton.icon(
+              onPressed:(){},
               icon: Icon(
                 Icons.credit_card_rounded,
                 size: 18,
               ),
-              child: Text(
+              label: Text(
                 '카드',
                 style: TextStyle(fontSize: 9),
               ),

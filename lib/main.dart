@@ -15,23 +15,19 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Bank_Clone_App',
-      theme: ThemeData(
-          primarySwatch: Colors.grey,
-          textTheme: TextTheme(
-            // 텍스트 테마 정의
-            headline1: TextStyle(color: Colors.red), // 제목 1 스타일 정의
-            bodyText1: TextStyle(color: Colors.black), // 본문 텍스트 스타일 정의
-          ),
-        buttonTheme: ButtonThemeData(
-          buttonColor: Colors.amber
-        )
-      ),
-      home: DefaultTabController(
-        length: 5,
-        child: Scaffold(
-            body: HomeScreen(),
-      bottomNavigationBar: Bottom()
-    )));
+        title: 'Bank_Clone_App',
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.grey[200],
+            primarySwatch: Colors.grey,
+            textTheme: TextTheme(
+              // 텍스트 테마 정의
+              headline1: TextStyle(color: Colors.red), // 제목 1 스타일 정의
+              bodyText1: TextStyle(color: Colors.black), // 본문 텍스트 스타일 정의
+            ),
+            buttonTheme: ButtonThemeData(buttonColor: Colors.amber)),
+        home: DefaultTabController(
+            length: 5,
+            child:
+                Scaffold(body: HomeScreen(), bottomNavigationBar: Bottom())));
   }
 }

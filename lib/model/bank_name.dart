@@ -7,17 +7,24 @@ class Bank {
   Bank({required this.logoPath, required this.name});
 }
 
-
 class BankListScreen extends StatelessWidget {
   final List<Bank> banks = [
     Bank(logoPath: 'assets/images/kb_logo.png', name: '국민은행'),
     Bank(logoPath: 'assets/images/shinhan_logo.png', name: '신한은행'),
     Bank(logoPath: 'assets/images/hana_logo.png', name: '하나은행'),
-    // 여기에 더 많은 은행 데이터를 추가할 수 있습니다.
+    // 추가 은행 데이터
   ];
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }}
+    return ListView.builder(
+      itemCount: banks.length,
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Image.asset(banks[index].logoPath),
+          title: Text(banks[index].name),
+        );
+      },
+    );
+  }
+}
